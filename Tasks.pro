@@ -10,11 +10,19 @@ CONFIG -= app_bundle
 TEMPLATE = app
 
 SOURCES += main.cpp \
-    task1.cpp
+    task1.cpp \
+    task2.cpp \
+    task3.cpp \
+    task4.cpp \
+    task5.cpp
 
 HEADERS += \
     task1.h \
-    commun_task.h
+    commun_task.h \
+    task2.h \
+    task3.h \
+    task4.h \
+    task5.h
 
 OPENCV3_INSTALL_PREFIX = C:/Develop/Cpp/Libs/opencv-3.1
 win32-msvc2015 {

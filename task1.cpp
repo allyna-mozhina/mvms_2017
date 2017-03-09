@@ -38,5 +38,5 @@ cv::Mat Task1::drawParallelepiped(std::string filename,float x,float y,float w,f
 
 std::vector<std::vector<float>> Task1::calcHistogramm(std::string filename,int binsize){
     throw std::exception("not implemented");
-    return cv::Mat();
+    return std::vector<std::vector<float>>();
 }
