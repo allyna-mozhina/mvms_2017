@@ -59,6 +59,9 @@
     <ClInclude Include="Mozhina_Alina_201731143_Task1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Mozhina_Alina_201731143_Task2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
