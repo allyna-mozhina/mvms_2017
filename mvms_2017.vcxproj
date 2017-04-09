@@ -120,6 +120,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mozhina_Alina_201731143_Task1.cpp" />
+    <ClCompile Include="Mozhina_Alina_201731143_Task2.cpp" />
     <ClCompile Include="task1.cpp" />
     <ClCompile Include="task2.cpp" />
     <ClCompile Include="task3.cpp" />

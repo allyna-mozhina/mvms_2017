@@ -5,6 +5,7 @@
 #include "task5.h"
 
 #include "Mozhina_Alina_201731143_Task1.h"
+#include "Mozhina_Alina_201731143_Task2.h"
 
 int main(int argc, char *argv[])
 {
@@ -15,10 +16,13 @@ int main(int argc, char *argv[])
     mvms_2017::Task5 x4(true);
 
     mvms_2017::Mozhina_Alina_201731143_Task1 task1(true);
+    mvms_2017::Mozhina_Alina_201731143_Task2 task2(true);
 
     try
     {
-        cv::Mat image = task1.drawTriangle("src.jpg", 2, 2, 90, 30, 60, 90);
+        //cv::Mat image = task1.drawTriangle("src.jpg", 2, 2, 90, 30, 60, 90);
+
+        cv::Mat image = task2.gauss(source, 3, 1);
 
         cv::imshow("Image", image);
         cv::waitKey(0);
@@ -26,6 +30,7 @@ int main(int argc, char *argv[])
     catch (std::exception ex)
     {
         std::cout << ex.what();
+        system("pause");
     }
 
     return 0;
