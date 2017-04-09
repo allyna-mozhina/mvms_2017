@@ -23,13 +23,13 @@ namespace mvms_2017
         const std::string FIRST_NAME = "Алина";
         const std::string LAST_NAME = "Можина";
 
-        Filter computeGauss(int filter_size, float sigma);
+        Filter computeGauss(int filter_size, float sigma) const;
 
-        void setPixel(cv::Mat &image, int x, int y, Color rgb);
-        Color getPixel(const cv::Mat &image, int x, int y);
+        void setPixel(cv::Mat &image, int x, int y, Color rgb) const;
+        Color getPixel(const cv::Mat &image, int x, int y) const;
 
-        Color convolution(cv::Mat &image, const Filter &filter, int x, int y);
-        cv::Mat applyFilter(cv::Mat &image, const Filter &filter);
+        Color convolution(cv::Mat &image, const Filter &filter, int x, int y) const;
+        cv::Mat applyFilter(cv::Mat &image, const Filter &filter) const;
  
     public:
         Mozhina_Alina_201731143_Task2(bool verbose);

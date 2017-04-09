@@ -7,7 +7,7 @@ namespace mvms_2017
 
     }
 
-    Filter Mozhina_Alina_201731143_Task2::computeGauss(int filter_size, float sigma)
+    Filter Mozhina_Alina_201731143_Task2::computeGauss(int filter_size, float sigma) const
     {
         Filter gaussFilter(filter_size, std::vector<float>(filter_size, 0));
 
@@ -27,7 +27,7 @@ namespace mvms_2017
         return std::move(gaussFilter);
     }
 
-    void Mozhina_Alina_201731143_Task2::setPixel(cv::Mat &image, int x, int y, Color rgb)
+    void Mozhina_Alina_201731143_Task2::setPixel(cv::Mat &image, int x, int y, Color rgb) const
     {
         auto color = image.at<cv::Vec3f>(cv::Point(x, y));
 
@@ -38,14 +38,14 @@ namespace mvms_2017
         image.at<cv::Vec3f>(cv::Point(x, y)) = color;
     }
 
-    Color Mozhina_Alina_201731143_Task2::getPixel(const cv::Mat &image, int x, int y)
+    Color Mozhina_Alina_201731143_Task2::getPixel(const cv::Mat &image, int x, int y) const
     {
         auto color = image.at<cv::Vec3b>(cv::Point(x, y));
 
         return Color(color[2], color[1], color[0]);
     }
 
-    Color Mozhina_Alina_201731143_Task2::convolution(cv::Mat &image, const Filter &filter, int x, int y)
+    Color Mozhina_Alina_201731143_Task2::convolution(cv::Mat &image, const Filter &filter, int x, int y) const
     {
         float rsum = 0, gsum = 0, bsum = 0;
 
@@ -68,14 +68,15 @@ namespace mvms_2017
         return Color(rsum, gsum, bsum);
     }
 
-    cv::Mat Mozhina_Alina_201731143_Task2::applyFilter(cv::Mat &image, const Filter &filter)
+    cv::Mat Mozhina_Alina_201731143_Task2::applyFilter(cv::Mat &image, const Filter &filter) const
     {
         int fwidth = filter[0].size();
         int fheight = filter.size();
 
-        cv::Mat filtered(image.size().width - (fwidth - 1),
-                         image.size().height - (fheight - 1), CV_32FC3);
-
+        cv::Mat filtered(image.size().height - (fheight - 1), 
+                         image.size().width - (fwidth - 1),
+                         CV_32FC3);
+        
         auto size = filtered.size();
 
         for (int x = 0; x < size.width; ++x)
@@ -112,7 +113,8 @@ namespace mvms_2017
     {
         Filter gaussFilter = computeGauss(filter_size, sigma);
 
-        return applyFilter(image, gaussFilter);
-        //return image;
+        auto result = applyFilter(image, gaussFilter);
+        result.convertTo(result, CV_8U);
+        return result;
     }
 }
