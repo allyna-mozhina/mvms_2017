@@ -131,6 +131,7 @@
     <ClInclude Include="commun_task.h" />
     <ClInclude Include="Mozhina_Alina_201731143_Task1.h" />
     <ClInclude Include="Mozhina_Alina_201731143_Task2.h" />
+    <ClInclude Include="Mozhina_Alina_201731143_Task3.h" />
     <ClInclude Include="task1.h" />
     <ClInclude Include="task2.h" />
     <ClInclude Include="task3.h" />
