@@ -39,6 +39,9 @@
     <ClCompile Include="Mozhina_Alina_201731143_Task2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Mozhina_Alina_201731143_Task3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="commun_task.h">

@@ -13,7 +13,13 @@ namespace mvms_2017
         const std::string FIRST_NAME = "Алина";
         const std::string LAST_NAME = "Можина";
 
-        short convolution(cv::Mat &image, const Filter &filter, int x, int y) const;
+        Filter computeMean(int filter_size) const;
+        
+        void setPixel(cv::Mat &image, int x, int y, uchar intensity) const;
+        uchar getPixel(cv::Mat &image, int x, int y) const;
+
+        float convolution(cv::Mat &image, const Filter &filter, int x, int y) const;
+        cv::Mat applyFilter(cv::Mat &image, const Filter &filter, int c) const;
 
     public:
         Mozhina_Alina_201731143_Task3(bool verbose);
