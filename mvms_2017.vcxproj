@@ -122,6 +122,7 @@
     <ClCompile Include="Mozhina_Alina_201731143_Task1.cpp" />
     <ClCompile Include="Mozhina_Alina_201731143_Task2.cpp" />
     <ClCompile Include="Mozhina_Alina_201731143_Task3.cpp" />
+    <ClCompile Include="Mozhina_Alina_201731143_Task5.cpp" />
     <ClCompile Include="task1.cpp" />
     <ClCompile Include="task2.cpp" />
     <ClCompile Include="task3.cpp" />
@@ -133,6 +134,7 @@
     <ClInclude Include="Mozhina_Alina_201731143_Task1.h" />
     <ClInclude Include="Mozhina_Alina_201731143_Task2.h" />
     <ClInclude Include="Mozhina_Alina_201731143_Task3.h" />
+    <ClInclude Include="Mozhina_Alina_201731143_Task5.h" />
     <ClInclude Include="task1.h" />
     <ClInclude Include="task2.h" />
     <ClInclude Include="task3.h" />
