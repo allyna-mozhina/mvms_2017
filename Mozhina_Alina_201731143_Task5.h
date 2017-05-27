@@ -3,15 +3,16 @@
 #include "task5.h"
 
 namespace mvms_2017
-{
-    struct Color
-    {
-        float red, green, blue;
-        Color(float red, float green, float blue);
-    };
-
+{ 
     class Mozhina_Alina_201731143_Task5 : public Task5
     {
+    public:
+        struct Color
+        {
+            float red, green, blue;
+            Color(float red, float green, float blue);
+        };
+
     private:
         const int VARIANT = 201731143;
         const std::string FIRST_NAME = "Алина";
